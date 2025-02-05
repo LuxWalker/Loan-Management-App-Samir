@@ -1,20 +1,21 @@
 package alangnantongga.android.loanmanagementapp.adapter
 
+import alangnantongga.android.loanmanagementapp.data.LoanItemResponse
 import alangnantongga.android.loanmanagementapp.databinding.ItemLoanListBinding
-import alangnantongga.android.loanmanagementapp.model.LoanListResponseItem
+import alangnantongga.android.loanmanagementapp.domain.Loan
+import alangnantongga.android.loanmanagementapp.presentation.LoanListMapper.toDomainModel
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class LoanListAdapter(
-    private val selectLoan: (LoanListResponseItem?, seeDetails: Boolean?) -> Unit
 ): RecyclerView.Adapter<LoanListAdapter.ViewHolder>(){
 
-    private var data = ArrayList<LoanListResponseItem>()
+    private var data = ArrayList<Loan>()
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(dataList: List<LoanListResponseItem>) {
+    fun setData(dataList: List<Loan>) {
         data.clear()
         data.addAll(dataList)
         notifyDataSetChanged()
@@ -25,12 +26,15 @@ class LoanListAdapter(
     )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        with(holder.itemView) {
-            val data = data.getOrNull(position)
+        with(holder.view) {
+            val data = data[position]
 
-            setOnClickListener {
-                selectLoan.invoke(data, true)
-            }
+            tvName.text = data.borrower.name
+            tvLoanAmount.text = data.amount.toString()
+            tvTerm.text = data.term.toString()
+            tvPurpose.text = data.purpose
+            tvInterestRate.text = data.interestRate.toString()
+            tvRiskRating.text = data.riskRating
         }
     }
 

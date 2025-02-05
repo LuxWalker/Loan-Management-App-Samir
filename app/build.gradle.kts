@@ -1,23 +1,32 @@
+import com.android.build.gradle.internal.generators.BuildConfigData
+import com.android.ide.common.repository.GMAVEN_BASE_URL
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-parcelize")
-    id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
 }
 
 android {
     namespace = "alangnantongga.android.loanmanagementapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "alangnantongga.android.loanmanagementapp"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val localProperties = Properties().apply {
+            load(rootProject.file("local.properties").inputStream())
+        }
+        val baseUrl = localProperties.getProperty("BASE_URL") ?: ""
+
+        buildConfigField("String", "BASE_URL", "\"$baseUrl\"")
     }
 
     buildTypes {
@@ -54,10 +63,12 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.logging.interceptor)
-    implementation(libs.hilt.android) // Use the latest version
-    kapt(libs.hilt.android.compiler) // Annotation processor
+    implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.lifecycle.viewmodel)
-    kapt(libs.androidx.hilt.compiler)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:layout_marginVertical="12dp"
+    android:layout_marginHorizontal="8dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
@@ -45,6 +47,17 @@
             app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
         <TextView
+            android:id="@+id/tvLoanAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:text="Amount"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toEndOf="@+id/tvLoanAmountTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <TextView
             android:id="@+id/tvInterestRateTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,6 +72,17 @@
             app:layout_constraintTop_toBottomOf="@+id/tvLoanAmountTitle" />
 
         <TextView
+            android:id="@+id/tvInterestRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:text="Interest"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toEndOf="@+id/tvInterestRateTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoanAmount" />
+
+        <TextView
             android:id="@+id/tvTermTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,9 +92,20 @@
             android:textAlignment="textStart"
             app:layout_constraintBottom_toTopOf="@id/tvPurposeTitle"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintHorizontal_bias="0.163"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvInterestRateTitle" />
+
+        <TextView
+            android:id="@+id/tvTerm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="16dp"
+            android:text="Term"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toEndOf="@+id/tvTermTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvInterestRate" />
 
         <TextView
             android:id="@+id/tvPurposeTitle"
@@ -87,6 +122,17 @@
             app:layout_constraintTop_toBottomOf="@+id/tvTermTitle" />
 
         <TextView
+            android:id="@+id/tvPurpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Purpose"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toEndOf="@+id/tvPurposeTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTerm" />
+
+        <TextView
             android:id="@+id/tvRiskRatingTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -99,6 +145,17 @@
             app:layout_constraintHorizontal_bias="0.182"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvPurposeTitle" />
+
+        <TextView
+            android:id="@+id/tvRiskRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Rating"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toEndOf="@+id/tvRiskRatingTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvPurpose" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

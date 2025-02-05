@@ -1,4 +1,4 @@
-package alangnantongga.android.loanmanagementapp.model
+package alangnantongga.android.loanmanagementapp.data
 
 import kotlinx.parcelize.Parcelize
 import android.os.Parcelable
@@ -8,92 +8,92 @@ import com.google.gson.annotations.SerializedName
 data class LoanListResponse(
 
 	@field:SerializedName("LoanListResponse")
-	val loanListResponse: List<LoanListResponseItem>
+	val loanListResponse: List<LoanItemResponse>? = null
 ) : Parcelable
 
 @Parcelize
-data class LoanListResponseItem(
+data class LoanItemResponse(
 
 	@field:SerializedName("interestRate")
-	val interestRate: Int,
+	val interestRate: Double? = null,
 
 	@field:SerializedName("amount")
-	val amount: Int,
+	val amount: Int? = null,
 
 	@field:SerializedName("purpose")
-	val purpose: String,
+	val purpose: String? = null,
 
 	@field:SerializedName("documents")
-	val documents: List<DocumentsItem>,
+	val documents: List<DocumentsItemResponse>? = null,
 
 	@field:SerializedName("borrower")
-	val borrower: Borrower,
+	val borrower: BorrowerItemResponse? = null,
 
 	@field:SerializedName("term")
-	val term: Int,
+	val term: Int? = null,
 
 	@field:SerializedName("id")
-	val id: String,
+	val id: String? = null,
 
 	@field:SerializedName("collateral")
-	val collateral: Collateral,
+	val collateral: CollateralResponse? = null,
 
 	@field:SerializedName("repaymentSchedule")
-	val repaymentSchedule: RepaymentSchedule,
+	val repaymentSchedule: RepaymentScheduleResponse? = null,
 
 	@field:SerializedName("riskRating")
-	val riskRating: String
+	val riskRating: String? = null
 ) : Parcelable
 
 @Parcelize
-data class Collateral(
+data class CollateralResponse(
 
 	@field:SerializedName("type")
-	val type: String,
+	val type: String? = null,
 
 	@field:SerializedName("value")
-	val value: Int
+	val value: Int? = null
 ) : Parcelable
 
 @Parcelize
-data class InstallmentsItem(
+data class InstallmentsItemResponse(
 
 	@field:SerializedName("amountDue")
-	val amountDue: Int,
+	val amountDue: Int? = null,
 
 	@field:SerializedName("dueDate")
-	val dueDate: String
+	val dueDate: String? = null
 ) : Parcelable
 
 @Parcelize
-data class Borrower(
+data class BorrowerItemResponse(
 
 	@field:SerializedName("creditScore")
-	val creditScore: Int,
+	val creditScore: Int? = null,
 
 	@field:SerializedName("name")
-	val name: String,
+	val name: String? = null,
 
 	@field:SerializedName("id")
-	val id: String,
+	val id: String? = null,
 
 	@field:SerializedName("email")
-	val email: String
+	val email: String? = null
 ) : Parcelable
 
 @Parcelize
-data class DocumentsItem(
+data class DocumentsItemResponse(
 
 	@field:SerializedName("type")
-	val type: String,
+	val type: String? = null,
 
 	@field:SerializedName("url")
-	val url: String
+	val url: String? = null
 ) : Parcelable
 
 @Parcelize
-data class RepaymentSchedule(
+data class RepaymentScheduleResponse(
 
 	@field:SerializedName("installments")
-	val installments: List<InstallmentsItem>
+	val installments: List<InstallmentsItemResponse>? = null
 ) : Parcelable
