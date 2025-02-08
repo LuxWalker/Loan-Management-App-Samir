@@ -19,7 +19,7 @@ class ListRepository @Inject constructor(){
     private val _loanList = MutableLiveData<List<Loan>>()
     val loanList: LiveData<List<Loan>> get() = _loanList
 
-    suspend fun getLoanList(){
+    fun getLoanList(){
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val response = RetrofitBuilder.apiService.getLoanList()
