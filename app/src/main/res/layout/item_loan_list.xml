@@ -10,26 +10,29 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:strokeColor="@color/black"
+    app:strokeColor="@color/green"
     app:strokeWidth="1dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/green">
 
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="8dp"
             android:text="Name"
             android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/tvLoanAmountTitle"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,6 +45,9 @@
             android:layout_marginBottom="8dp"
             android:text="Loan Amount :"
             android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvInterestRateTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvName" />
@@ -50,10 +56,12 @@
             android:id="@+id/tvLoanAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="Amount"
             android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/tvLoanAmountTitle"
             app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
@@ -66,6 +74,9 @@
             android:layout_marginBottom="8dp"
             android:text="Interest Rate :"
             android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/tvTermTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvLoanAmountTitle" />
@@ -74,10 +85,12 @@
             android:id="@+id/tvInterestRate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="Interest"
             android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/tvInterestRateTitle"
             app:layout_constraintTop_toBottomOf="@+id/tvLoanAmount" />
 
@@ -88,8 +101,11 @@
             android:layout_marginStart="56dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Term :"
+            android:text="Term               :"
             android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/tvPurposeTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvInterestRateTitle" />
@@ -98,10 +114,12 @@
             android:id="@+id/tvTerm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="Term"
             android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/tvTermTitle"
             app:layout_constraintTop_toBottomOf="@+id/tvInterestRate" />
 
@@ -112,8 +130,11 @@
             android:layout_marginStart="56dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Purpose :"
+            android:text="Purpose         :"
             android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/tvRiskRatingTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTermTitle" />
@@ -122,10 +143,12 @@
             android:id="@+id/tvPurpose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="Purpose"
             android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/tvPurposeTitle"
             app:layout_constraintTop_toBottomOf="@+id/tvTerm" />
 
@@ -135,8 +158,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="56dp"
             android:layout_marginTop="8dp"
-            android:text="Risk Rating :"
+            android:text="Risk Rating   :"
             android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/btnDetail"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvPurposeTitle" />
@@ -145,10 +171,12 @@
             android:id="@+id/tvRiskRating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="Rating"
             android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/btnDetail"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/tvRiskRatingTitle"
@@ -161,7 +189,9 @@
             android:layout_marginTop="232dp"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="16dp"
+            android:backgroundTint="#FFC107"
             android:text="Detail"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

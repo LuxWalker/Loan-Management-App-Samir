@@ -13,20 +13,20 @@
         android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:queryHint="Search by name..."
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/sortSpinner"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/outline_green"
+        android:queryHint="Search by name..."
+        app:layout_constraintEnd_toStartOf="@+id/sortSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/sortSpinner"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvList"

@@ -1,8 +1,10 @@
 package alangnantongga.android.loanmanagementapp.presentation.loanlist
 
+import alangnantongga.android.loanmanagementapp.R
 import alangnantongga.android.loanmanagementapp.adapter.LoanListAdapter
 import alangnantongga.android.loanmanagementapp.databinding.ActivityLoanListBinding
 import alangnantongga.android.loanmanagementapp.domain.Loan
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -10,6 +12,7 @@ import android.widget.ArrayAdapter
 import android.widget.SearchView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 
 class LoanListActivity : AppCompatActivity() {
