@@ -68,6 +68,8 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.glide)
+    kapt(libs.compiler)
     kapt(libs.androidx.hilt.compiler.v100)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

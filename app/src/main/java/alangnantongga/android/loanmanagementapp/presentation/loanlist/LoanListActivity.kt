@@ -11,10 +11,7 @@ import android.widget.SearchView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
-@AndroidEntryPoint
 class LoanListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoanListBinding
@@ -22,7 +19,6 @@ class LoanListActivity : AppCompatActivity() {
     private var loanList = ArrayList<Loan>()
     private var selectedSortOption: String = ""
 
-    @Inject
     lateinit var adapter: LoanListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,7 +59,7 @@ class LoanListActivity : AppCompatActivity() {
     }
 
     private fun setupFilterDropdown() {
-        val sortOptions = arrayOf("Amount", "Term", "Purpose")
+        val sortOptions = arrayOf("Default", "Name", "Amount", "Term", "Purpose")
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, sortOptions)
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 

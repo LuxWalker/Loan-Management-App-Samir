@@ -13,7 +13,7 @@
         android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:queryHint="Search loans..."
+        android:queryHint="Search by name..."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sortSpinner"
         app:layout_constraintTop_toTopOf="parent"

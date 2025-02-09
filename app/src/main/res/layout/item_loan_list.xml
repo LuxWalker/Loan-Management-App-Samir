@@ -37,13 +37,12 @@
             android:id="@+id/tvLoanAmountTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="Loan Amount :"
             android:textAlignment="textStart"
             app:layout_constraintBottom_toTopOf="@+id/tvInterestRateTitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
@@ -62,13 +61,12 @@
             android:id="@+id/tvInterestRateTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="Interest Rate :"
             android:textAlignment="textStart"
             app:layout_constraintBottom_toTopOf="@id/tvTermTitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvLoanAmountTitle" />
 
@@ -87,13 +85,12 @@
             android:id="@+id/tvTermTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="Term :"
             android:textAlignment="textStart"
             app:layout_constraintBottom_toTopOf="@id/tvPurposeTitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.163"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvInterestRateTitle" />
 
@@ -112,13 +109,12 @@
             android:id="@+id/tvPurposeTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="Purpose :"
             android:textAlignment="textStart"
             app:layout_constraintBottom_toTopOf="@id/tvRiskRatingTitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.173"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTermTitle" />
 
@@ -137,13 +133,11 @@
             android:id="@+id/tvRiskRatingTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="32dp"
             android:text="Risk Rating :"
             android:textAlignment="textStart"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.182"
+            app:layout_constraintBottom_toTopOf="@+id/btnDetail"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvPurposeTitle" />
 
@@ -164,11 +158,13 @@
             android:id="@+id/btnDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="232dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="16dp"
             android:text="Detail"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
